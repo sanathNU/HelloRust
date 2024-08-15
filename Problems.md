@@ -1,7 +1,7 @@
 I have given these problems in markdown format with tick marks, which you can complete as soon as you write the functions.
 
 ### Level 1: Basics
-- [ ] Favorite Mobile Apps: Write a program to print your favorite mobile apps in a specific format.
+- [ ] Favorite Mobile Apps: Write a program to print your favorite mobile apps in a specific format (Just for output, don't take any input)
 - [ ] Student Details: Write a program to read and print a student’s height, age, and section using a struct.
 - [ ] ASCII Value: Write a program to print the ASCII value of a given character using Rust's `as` keyword.
 - [ ] Temperature Conversion: Write a program to convert degrees Fahrenheit into degrees Celsius using a function.
