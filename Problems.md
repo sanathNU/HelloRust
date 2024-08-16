@@ -10,9 +10,8 @@ I have given these problems in markdown format with tick marks, which you can co
 ### Level 2: Control Flow & Functions
 - [ ] Largest of Two Numbers: Write a function to find the largest of two numbers using `if` statements.
 - [ ] Minimum of Three Numbers: Write functions to return the minimum of three numbers:
-  - [ ] a. Using simple `if`
-  - [ ] b. Using `if-else` and logical operators
-  - [ ] c. Using a match expression (Rust’s equivalent to a ternary operator)
+  - [ ] a. Using `if-else` and logical operators
+  - [ ] b. Using a match expression (Rust’s equivalent to a ternary operator)
 - [ ] Voting Eligibility: Write a program to determine whether a person is eligible to vote using a conditional expression.
 - [ ] Vowel or Consonant: Write a program to determine whether the given character is a vowel or a consonant using pattern matching.
 - [ ] Multiplication Table: Write a function to print the multiplication table of N, where N is entered by the user.

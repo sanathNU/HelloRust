@@ -67,7 +67,7 @@ pub fn stud_read_write(){
 }
 
 // Function to calculate and print the area of a circle
-fn area_of_circle(){
+pub fn area_of_circle(){
     let mut input = String::new();
     println!("Enter the radius of the circle for the area to be calculated:");
     io::stdin().read_line(&mut input).expect("Failed to read input");
@@ -79,7 +79,7 @@ fn area_of_circle(){
 }
 
 // Function to print the ASCII value of a character
-fn print_ascii_value() {
+pub fn print_ascii_value() {
     let mut input = String::new();
 
     println!("Enter a single character:");
@@ -95,7 +95,7 @@ fn print_ascii_value() {
     println!("The ASCII value of '{}' is {}", ch, ch as u8);
 }
 // Function to convert Fahrenheit to Celsius
-fn far_to_cel() {
+pub fn far_to_cel() {
     let mut input = String::new();
 
     println!("Enter temperature in Fahrenheit:");
