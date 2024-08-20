@@ -84,7 +84,7 @@ pub fn vowelornot(chaar:char)-> bool{
 }
 
 // function to print multiplication table of given number upto 10
-pub fn printMult(n: i32){
+pub fn print_mult(n: i32){
     println!("The multiplication table of {} is  as follows",n);
     let mut count = 0;
     loop {

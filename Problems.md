@@ -63,7 +63,6 @@ I have given these problems in markdown format with tick marks, which you can co
 - [ ] Quadratic Equation (Complex Roots): Write a program to find the roots of a quadratic equation, handling complex roots using Rust’s `num::Complex` type.
 
 ### Level 9: Pointers & File Handling
-- [ ] Student Details with Struct: Write a program to read and print student details using a struct.
 - [ ] Book Details with Nested Structs: Write a program to read and print book details using nested structs.
 - [ ] Arithmetic with Pointers: Write a program to perform arithmetic operations on two integers using Rust’s references.
 - [ ] Case Conversion with Pointers: Write a program to convert a character from lowercase to uppercase using references.
