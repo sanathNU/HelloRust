@@ -12,5 +12,5 @@ fn main() {
     // level_1::favapps();
     // level_1::stud_read_write();
     // level_2::vowel_or_consonant();
-    level_4::counting_characters();
+    level_4::decimal_to_binary();
 }

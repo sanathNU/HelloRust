@@ -49,3 +49,82 @@ fn countchar(characters: Vec<char>) -> HashMap<String,i32> {
 
     counts
 }
+
+//function to classify a given number as prime or composite
+// 🟩public wrapper function
+pub fn prime_or_composite() {
+
+    fn primecomp(number:u32)->bool{
+        //normal approach
+        // for i in 2..number{
+        //     if number%i==0 { return false};
+        // }
+        // true
+    
+        // a smarter approach
+        if number==1 {return false};
+        if number==2 { return true};
+        if number%2==0 {return false};
+    
+        let limit = (number as f64).sqrt() as u32;
+    
+        for i in 3..limit {
+            if number%i==0 { return false};
+        }
+        true
+    }
+
+    println!("Function to calculate whether a number is prime or composite");
+    println!("Enter the number");
+    let number:u32 = read!();
+
+    let answer:String =  match primecomp(number){
+        true => String::from("Prime"),
+        _ => String::from("Composite"),
+    };
+
+    println!("The number:{} is {}",number,answer);
+}
+
+
+
+//function to calculate sum of squares of first n even numbers
+// 🟩public wrapper function
+pub fn sum_of_squares(){
+    println!("To calculate the sum of squares of first n even numbers");
+    println!("Enter the number N");
+    let n:i32 = read!();
+
+    //a simple forumla exists
+    let answer = (2*n*(n+1)*(2*n+1)/3);
+
+    println!("The sum of squares of the first N:{} even numbers is {}",n,answer);
+}
+
+// function to convert decimal number to a binary number
+// 🟩public wrapper function
+pub fn decimal_to_binary(){
+    println!("This converts a decimal number to a binary string");
+    println!("Enter the decimal number to be converted");
+    let n:i32 = read!();
+
+    if n < 0 {
+        println!("Please enter a non-negative integer.");
+        return;
+    }
+    let mut a = n;
+    let mut out = String::new();
+
+    while a > 0 {
+        let b: char = match a % 2 {
+            0 => '0',
+            1 => '1',
+            _ => unreachable!(), // This line will never be reached
+        };
+        out.push(b);
+        a /= 2; // Update a to be the quotient of the division by 2
+    }
+    out = out.chars().rev().collect();
+
+    println!("The binary converted number of {} is {}",n,out);
+}
