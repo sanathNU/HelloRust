@@ -1,4 +1,4 @@
-use std::{io, task::ready};
+use std::io;
 //using the new crate text_io
 use text_io;
 
