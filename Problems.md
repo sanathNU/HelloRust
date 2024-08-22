@@ -34,7 +34,7 @@
 - [ ] **Palindrome Check:** Check if a given number or string is a palindrome.
 - [ ] **Longest Common Substring:** Find the longest common substring between two strings.
 - [ ] **Anagram Check:** Check if two strings are anagrams of each other.
-- [ ] **Case Conversion:** Convert a string from lowercase to uppercase and vice versa using Rust’s string methods.
+- [ ] **Case Conversion:** Convert each lowercase character in a string to uppercase and each uppercase character to lowercase using Rust’s string methods, print others as it is.
 - [ ] **Read and Swap:** Write a program to read two integers from the user, swap their values using mutable references, and print both the original and swapped values.
 - [ ] **Arithmetic with Pointers:** Perform arithmetic operations on two integers using Rust’s references.
 - [ ] **Complex Number Magnitude:** Write a program to compute the magnitude (absolute value) of a complex number using Rust’s `num::Complex` type.

@@ -13,5 +13,5 @@ fn main() {
     // level_1::favapps();
     // level_1::stud_read_write();
     // level_2::vowel_or_consonant();
-    level_5::complex_number_magnitude();
+    level_5::longest_common_substring();
 }
