@@ -4,5 +4,6 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+num = "0.4.3"
 text_io = "0.1.12"
 unic-emoji-char = "0.9.0"

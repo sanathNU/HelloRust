@@ -114,21 +114,7 @@ fn calc_sol(a: f64,b: f64,c: f64)->(f64,f64){
 // function to calculate factorial of a number using recursion
 // - not handling the edge case of negative numbers are given (but it should since any value before 1 should give 1)
 
-// 🟩public wrapper function
-pub fn find_factorial() {
-    println!("Enter the N to which find the factorial:");
-    let n:u32 = text_io::read!();
-    let fact:u32 = factorial(n);
-    println!("The Factorial of {} is {}",n,fact);
-}
-//caveats, this doesn't handle a buffer overflow condition if factorial greater than u32 MAX
-fn factorial(i:u32)-> u32{
-    if i<=1{
-        return i;
-    } else {
-        return i*factorial(i-1)
-    }
-}
+
 // 🟩public function for 2 problems at once
 // function to print the first N natural numbers using a loop
 pub fn print_natural_numbers() {
@@ -170,3 +156,38 @@ pub fn average_n(){
     let average = summi as f64/ n as f64;
     println!("The average of N:{} numbers is {}",n,average);
 }
+
+// 🟩public function for **Check in Range**
+pub fn check_in_range() {
+    println!("Enter the max and min range seperated by whitespaces of your number range");
+    //strange, using text_io::read() has an error here
+
+    let mut input = String::new();
+    std::io::stdin().read_line(&mut input).expect("Failed to read line");
+    let mut range_iter = input.trim().split_whitespace().map(|c| c.parse::<i32>().expect("Expected integers"));
+
+    let min = match range_iter.next() {
+        Some(value) => value,
+        None => {
+            panic!("No minimum value provided");
+        }
+    };
+
+    let max  = match range_iter.next() {
+        Some(value) => value,
+        None => {
+            panic!("No maximum value provided");
+        }
+    };
+
+    println!("Enter the number you would like to check for");
+    let n:i32 = text_io::read!();
+
+    let answers = match n {
+        n if n < min || n > max => println!("The number {} is outside of range {}:{}",n,min,max),
+        n if min<=n && n<=max => println!("The number {} is within range",n),
+        _ => println!("Special case not defined"),
+    };
+}
+
+

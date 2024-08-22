@@ -86,8 +86,6 @@ pub fn prime_or_composite() {
     println!("The number:{} is {}",number,answer);
 }
 
-
-
 //function to calculate sum of squares of first n even numbers
 // 🟩public wrapper function
 pub fn sum_of_squares(){
@@ -127,4 +125,26 @@ pub fn decimal_to_binary(){
     out = out.chars().rev().collect();
 
     println!("The binary converted number of {} is {}",n,out);
+}
+
+// **Euclidean Algorithm** functions
+// 🟩public wrapper function
+pub fn gcd_calculate() {
+    println!("Enter the characters whose in GCD should be calculated in next line seperated by whitespaces");
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).unwrap();
+    let nos:Vec<i32> = input.trim().split_whitespace().map(|c| c.parse::<i32>().expect("value not integers")).collect();
+    
+    let (a ,b) = (nos[0],nos[1]);
+    let ans = GCD(a,b);
+
+    println!("The GCD of {} and {} is {}", a, b, ans);
+}
+// this only passes the borrow checkers wrath, because it's Int and not any other data type
+// it would be a nightmare to polymorphize this. ( I know the generics will help me do this, but man, i'm lazy)
+fn GCD(a:i32,b:i32)->i32 {
+    match b {
+        0 => return a,
+        _ => return GCD(b,a%b)
+    }
 }

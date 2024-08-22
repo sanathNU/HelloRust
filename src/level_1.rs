@@ -1,3 +1,4 @@
+use std::f64::consts;
 use std::io;
 use std::io::{BufRead, Write};
 
@@ -159,4 +160,19 @@ pub fn far_to_cel() {
 
     let celsius = (fahrenheit - 32.0) * 5.0 / 9.0;
     println!("The temperature in Celsius is {:.2}", celsius);
+}
+
+// Add three numbers
+pub fn add_three_numbers() {
+    println!("Enter the three numbers to be added in a single line");
+    let mut input = String::new();
+
+    io::stdin().read_line(&mut input).unwrap();
+    let sum:i32 = input
+        .trim()
+        .split_whitespace()
+        .map(|s| s.parse::<i32>().expect("Enter a number"))
+        .sum();
+    
+    println!("The sum of the numbers is: {}", sum);
 }

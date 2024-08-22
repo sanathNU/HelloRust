@@ -1,7 +1,15 @@
-// function to calculate GCD of two numbers using recursion
-// this only passes the borrow checkers wrath, because it's Int and not any other data type
-// it would be a nightmare to polymorphize this.
-fn gcd(a:i32,b:i32)->i32 {
-    if b==0 { return a;}
-    return gcd(b,a%b);
+// 🟩public wrapper function
+pub fn find_factorial() {
+    println!("Enter the N to which find the factorial:");
+    let n:u32 = text_io::read!();
+    let fact:u32 = factorial(n);
+    println!("The Factorial of {} is {}",n,fact);
+}
+//caveats, this doesn't handle a buffer overflow condition if factorial greater than u32 MAX (I think?)
+fn factorial(i:u32)-> u32{
+    if i<=1{
+        return i;
+    } else {
+        return i*factorial(i-1)
+    }
 }
