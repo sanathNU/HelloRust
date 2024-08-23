@@ -15,5 +15,5 @@ fn main() {
     // level_1::favapps();
     // level_1::stud_read_write();
     // level_2::vowel_or_consonant();
-    level_6::triangle_area_calculation();
+    level_7::binary_search();
 }

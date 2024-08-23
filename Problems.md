@@ -46,8 +46,7 @@
 
 #### Level 7: Recursion & Searching
 - [ ] **Factorial Calculation:** Calculate the factorial of a number using recursion.
-- [ ] **Element Position in Array:** Find the position of an element in an unsorted array using iteration.
-- [ ] **Linear Search:** Search for an element in an array using linear search.
+- [ ] **Element Position in Array:** Search for an element in an array using linear search and also return the position if it exists. Use iterators for it.
 - [ ] **Binary Search:** Search for an element in a sorted array using binary search.
 - [ ] **Recursive Binary Search:** Implement binary search recursively.
 
