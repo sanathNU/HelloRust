@@ -19,7 +19,7 @@ pub fn factorial(i:u32)-> u32{
 
 //create array
 // **Linear iterative search
-fn create_array()->Vec<i32>{
+pub fn create_array()->Vec<i32>{
     println!("Enter the elements of the array in a line seperate by whitespace:");
     let mut input = String::new();
 

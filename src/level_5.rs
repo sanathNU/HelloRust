@@ -30,8 +30,8 @@ pub fn complex_number_magnitude() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).unwrap();
     let nos:Vec<i32> = input.trim().split_whitespace().map(|c| c.parse::<i32>().expect("value not integers")).collect();
-    
     let (a ,b) = (nos[0],nos[1]);
+    
     let no = Complex::new(a as f64, b as f64);
     let magnitude = calc_magnitude(no);
 
