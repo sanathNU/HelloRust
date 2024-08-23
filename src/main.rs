@@ -3,6 +3,8 @@ mod level_2;
 mod level_3;
 mod level_4;
 mod level_5;
+mod level_6;
+mod level_7;
 
 //default function to prevent any testing
 // fn main() {
@@ -13,5 +15,5 @@ fn main() {
     // level_1::favapps();
     // level_1::stud_read_write();
     // level_2::vowel_or_consonant();
-    level_5::longest_common_substring();
+    level_6::triangle_area_calculation();
 }

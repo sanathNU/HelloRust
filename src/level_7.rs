@@ -6,7 +6,7 @@ pub fn find_factorial() {
     println!("The Factorial of {} is {}",n,fact);
 }
 //caveats, this doesn't handle a buffer overflow condition if factorial greater than u32 MAX (I think?)
-fn factorial(i:u32)-> u32{
+pub fn factorial(i:u32)-> u32{
     if i<=1{
         return i;
     } else {

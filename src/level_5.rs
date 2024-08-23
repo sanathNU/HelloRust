@@ -71,8 +71,8 @@ pub fn anagram_checker() {
     println!("Examples are 'spear' and 'pears' ");
     println!("Enter the two strings in 2 seperate lines");
 
-    let mut word1:String = read!();
-    let mut word2:String = read!();
+    let word1:String = read!();
+    let word2:String = read!();
 
     let char_countsA = word1.chars().collect::<Counter<_>>();
     let char_countsB = word2.chars().collect::<Counter<_>>();

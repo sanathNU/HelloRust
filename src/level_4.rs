@@ -94,7 +94,7 @@ pub fn sum_of_squares(){
     let n:i32 = read!();
 
     //a simple forumla exists
-    let answer = (2*n*(n+1)*(2*n+1)/3);
+    let answer = 2*n*(n+1)*(2*n+1)/3;
 
     println!("The sum of squares of the first N:{} even numbers is {}",n,answer);
 }
