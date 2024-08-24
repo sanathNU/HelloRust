@@ -1,0 +1,63 @@
+
+Memoir
+===========
+Name: Educated	Author: Tara Westover	Pages: 334
+
+Mystery/Drama
+===========
+Name: Where the Crawdads Sing	Author: Delia Owens	Pages: 368
+
+Thriller
+===========
+Name: The Silent Patient	Author: Alex Michaelides	Pages: 336
+
+Classic
+===========
+Name: The Great Gatsby	Author: F. Scott Fitzgerald	Pages: 180
+
+Dystopian
+===========
+Name: 1984	Author: George Orwell	Pages: 328
+Name: Brave New World	Author: Aldous Huxley	Pages: 268
+
+Non-Fiction
+===========
+Name: Sapiens	Author: Yuval Noah Harari	Pages: 443
+
+Post-Apocalyptic
+===========
+Name: The Road	Author: Cormac McCarthy	Pages: 287
+
+Fiction
+===========
+Name: To Kill a Mockingbird	Author: Harper Lee	Pages: 281
+Name: The Catcher in the Rye	Author: J.D. Salinger	Pages: 277
+Name: The Goldfinch	Author: Donna Tartt	Pages: 771
+
+Adventure
+===========
+Name: Life of Pi	Author: Yann Martel	Pages: 319
+
+Science Fiction
+===========
+Name: The Hitchhiker's Guide to the Galaxy	Author: Douglas Adams	Pages: 224
+
+Historical Fiction
+===========
+Name: Beloved	Author: Toni Morrison	Pages: 324
+
+Magical Realism
+===========
+Name: One Hundred Years of Solitude	Author: Gabriel Garcia Marquez	Pages: 417
+Mystery/Drama: 1
+Memoir: 1
+Magical Realism: 1
+Fiction: 3
+Dystopian: 2
+Historical Fiction: 1
+Thriller: 1
+Non-Fiction: 1
+Adventure: 1
+Science Fiction: 1
+Post-Apocalyptic: 1
+Classic: 1
