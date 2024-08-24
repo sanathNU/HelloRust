@@ -1,0 +1,74 @@
+Name: To Kill a Mockingbird
+Author: Harper Lee
+Pages: 281
+Genre: Fiction
+
+Name: 1984
+Author: George Orwell
+Pages: 328
+Genre: Dystopian
+
+Name: The Great Gatsby
+Author: F. Scott Fitzgerald
+Pages: 180
+Genre: Classic
+
+Name: One Hundred Years of Solitude
+Author: Gabriel Garcia Marquez
+Pages: 417
+Genre: Magical Realism
+
+Name: The Catcher in the Rye
+Author: J.D. Salinger
+Pages: 277
+Genre: Fiction
+
+Name: The Road
+Author: Cormac McCarthy
+Pages: 287
+Genre: Post-Apocalyptic
+
+Name: Life of Pi
+Author: Yann Martel
+Pages: 319
+Genre: Adventure
+
+Name: Beloved
+Author: Toni Morrison
+Pages: 324
+Genre: Historical Fiction
+
+Name: The Hitchhiker's Guide to the Galaxy
+Author: Douglas Adams
+Pages: 224
+Genre: Science Fiction
+
+Name: Brave New World
+Author: Aldous Huxley
+Pages: 268
+Genre: Dystopian
+
+Name: The Silent Patient
+Author: Alex Michaelides
+Pages: 336
+Genre: Thriller
+
+Name: Educated
+Author: Tara Westover
+Pages: 334
+Genre: Memoir
+
+Name: The Goldfinch
+Author: Donna Tartt
+Pages: 771
+Genre: Fiction
+
+Name: Where the Crawdads Sing
+Author: Delia Owens
+Pages: 368
+Genre: Mystery/Drama
+
+Name: Sapiens: A Brief History of Humankind
+Author: Yuval Noah Harari
+Pages: 443
+Genre: Non-Fiction
