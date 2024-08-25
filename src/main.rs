@@ -18,5 +18,5 @@ fn main() {
     // level_1::favapps();
     // level_1::stud_read_write();
     // level_2::vowel_or_consonant();
-    level_9::book_read_write();
+    level_10::multiple_factorial();
 }

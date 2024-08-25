@@ -63,9 +63,9 @@
 - [ ] **File Statistics:** Calculate and print file statistics such as line count and word count.
 
 #### Level 10: Advanced Topics
-- [ ] **Concurrency:** Use Rust’s concurrency features (e.g., threads, `std::sync` module) to perform tasks in parallel.
-- [ ] **Error Handling:** Demonstrate Rust’s error handling with `Result` and `Option` types, including custom error types.
+- [ ] **Concurrency:** Write a Rust program that calculates the factorial of a number for multiple values in parallel using threads. 
+- [ ] **Error Handling:**  Create a Rust application that reads a list of integers from a file. Handle potential errors such as file not found, invalid integer format, and implement custom error types for different failure scenarios.
 - [ ] **Ownership & Borrowing:** Illustrate Rust’s ownership, borrowing, and lifetimes principles with examples.
-- [ ] **Macros:** Write a custom macro to simplify repetitive code tasks.
-- [ ] **Trait Implementation:** Implement custom traits and use trait bounds to create generic functions and structs.
-- [ ] **Asynchronous Programming:** Use Rust’s async/await syntax to perform asynchronous tasks.
+- [ ] **Macros:** Write a custom Rust macro to automate the creation of boilerplate code for simple CRUD operations on a struct. The macro should generate methods for creating, reading, updating, and deleting instances of the struct.
+- [ ] **Trait Implementation:** Design a generic Rust library that provides a trait for calculating the area of various geometric shapes (e.g., circles, rectangles, triangles). Implement this trait for different shapes and demonstrate its usage with a generic function.
+- [ ] **Asynchronous Programming:** Build a Rust web scraper that fetches the content of multiple web pages concurrently using async/await syntax. Process the content of each page to extract and print the titles of the web pages.
