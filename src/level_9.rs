@@ -121,8 +121,8 @@ pub fn book_read_write(){
         "N" => false,
         _ => panic!("Invalid input. Please enter Y or N")
     };
-    let in_path = "books.txt";
-    let out_path = "Library.txt";
+    let in_path = "files/books.txt";
+    let out_path = "files/Library.txt";
 
     let (books,stats) = read_input(&in_path,file_stats);
 

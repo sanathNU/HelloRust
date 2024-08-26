@@ -1,11 +1,13 @@
 use std::io;
 use std::sync::{Arc,Mutex};
 use std::thread;
+use std::fs::File;
 
 // function to use threads for calculating factorial of a number
 fn factorial(n:u32) -> u32 {
     (1..=n).product()
 }
+// 🟩public wrapper function
 pub fn multiple_factorial() {
     // let numbers = vec![5,6,7,8,9];
     println!("Enter the numbers whose factorial should be calculated in a whitespace seperated string");
@@ -38,4 +40,14 @@ pub fn multiple_factorial() {
         println!("Factorial of {} if {}",num, results[i]);
     }
 
+}
+
+// 🟩public wrapper function
+pub fn reading_integers(path:&str)->std::io::Result<()> {
+    let mut file = File::open(path)?;
+    let mut contents = String::new();
+    file.read_to_string(&mut contents).unwrap();
+
+    // let ints:Vec<i32> = 
+    Ok(())
 }

@@ -15,8 +15,5 @@ mod level_10;
 // }
 
 fn main() {
-    // level_1::favapps();
-    // level_1::stud_read_write();
-    // level_2::vowel_or_consonant();
-    level_10::multiple_factorial();
+    level_10::reading_integers("files/numbers.txt");
 }
