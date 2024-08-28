@@ -16,8 +16,9 @@ mod level_10;
 
 fn main() {
     // level_10::reading_integers("files/numbers.txt");
-    match level_10::reading_integers("files/numbers.txt") {
-        Ok(integers) => println!("Successfully read integers: {:?}",integers),
-        Err(e) => eprintln!("Error: {}",e),
-    }
+    // match level_10::reading_integers("files/numbers.txt") {
+    //     Ok(integers) => println!("Successfully read integers: {:?}",integers),
+    //     Err(e) => eprintln!("Error: {}",e),
+    // }
+    level_10::task_manager_checker();
 }

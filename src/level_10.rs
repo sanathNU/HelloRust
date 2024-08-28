@@ -5,6 +5,7 @@ use std::error::Error;
 use std::fs::File;
 use std::io::{BufRead,BufReader};
 use std::io;
+use std::collections::HashMap;
 
 // function to use threads for calculating factorial of a number
 fn factorial(n:u32) -> u32 {
@@ -51,7 +52,7 @@ enum AppError {
     ParseError(String),
 }
 impl fmt::Display for AppError {
-    fn fmt(&self, f:&mut fmt::Formatter<!_>)-> fmt::Result {
+    fn fmt(&self, f:&mut fmt::Formatter)-> fmt::Result {
         match self {
             AppError::IoError(err) => write!(f,"IO error: {}",err),
             AppError::ParseError(ref msg) => write!(f,"Parse error: {}",msg),
@@ -82,3 +83,65 @@ pub fn reading_integers(path:&str)->Result<Vec<i32>, AppError> {
         ;}
     Ok(integers)
 }
+// creating a task manager for lifetime problem
+struct Task {
+    name: String,
+    description: String,
+    priority: u8,
+}
+impl Task {
+    fn new(name: &str, description: &str, priority: u8) -> Self {
+        Self {
+            name: name.to_string(),
+            description: description.to_string(),
+            priority: priority
+        }
+
+    }
+
+    fn display(&self) {
+        println!("Name: {}\nDescription: {}\nPriority: {}\n",self.name, self.description, self.priority);
+    }
+}
+
+struct TaskManager<'a> {
+    tasks: HashMap<String,Task>,
+    //what is this?
+    _phantom: std::marker::PhantomData<&'a ()>
+}
+impl<'a> TaskManager<'a> {
+    fn new() -> Self {
+        Self {
+            tasks: HashMap::new(),
+            _phantom: std::marker::PhantomData,
+        }
+    }
+    fn add_task(&mut self, task: Task) {
+        self.tasks.insert(task.name.clone(),task);
+    }
+    fn get_task_details(&self, name: &str) -> Option<&Task> {
+        self.tasks.get(name)
+    }
+    fn display_tasks(&self){
+        if self.tasks.is_empty() {
+            println!("No Tasks Available");
+        }
+        for task in self.tasks.values() {
+            task.display();
+        }
+    }
+}
+// 🟩public wrapper function
+pub fn task_manager_checker() {
+    println!("This function checks the taskmanaging function");
+    let mut manager = TaskManager::new();
+
+    let task1 = Task::new("Wake up Early","Wake up with 7 hours of sleep before 7AM",9);
+    let task2 = Task::new("Breakfast","Eat healthy breakfast 90 mins after waking up",6);
+
+    manager.add_task(task1);
+    manager.add_task(task2);
+
+    manager.display_tasks();
+}
+
