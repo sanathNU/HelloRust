@@ -1,4 +1,5 @@
 use core::fmt;
+use std::borrow::BorrowMut;
 use std::sync::{Arc,Mutex};
 use std::thread;
 use std::error::Error;
@@ -6,6 +7,7 @@ use std::fs::File;
 use std::io::{BufRead,BufReader};
 use std::io;
 use std::collections::HashMap;
+use reqwest;
 
 // function to use threads for calculating factorial of a number
 fn factorial(n:u32) -> u32 {
@@ -145,3 +147,19 @@ pub fn task_manager_checker() {
     manager.display_tasks();
 }
 
+//creating a web_scraping bot to capture trending wikipedia pages, and report single line summaries of it.
+// 🟩public wrapper function
+// pub fn web_scraper(url:&str) -> 
+
+pub fn scrapper() -> Result<(), reqwest::Error> {
+    let url = "https://wikipedia.org";
+    let client = reqwest::blocking::Client::new();
+
+    let response = client.get(url).send()?;
+    println!("Status request: {}",response.status());
+
+    let body = response.text()?;
+    println!("Response body:\n{}",body);
+
+    Ok(())
+}

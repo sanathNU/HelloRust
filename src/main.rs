@@ -1,3 +1,5 @@
+#![allow(warnings)]
+
 mod level_1;
 mod level_2;
 mod level_3;
@@ -15,10 +17,9 @@ mod level_10;
 // }
 
 fn main() {
-    // level_10::reading_integers("files/numbers.txt");
-    // match level_10::reading_integers("files/numbers.txt") {
-    //     Ok(integers) => println!("Successfully read integers: {:?}",integers),
-    //     Err(e) => eprintln!("Error: {}",e),
-    // }
-    level_10::task_manager_checker();
+
+    if let Err(e) = level_10::scrapper() {
+        eprintln!("Error occurred: {}",e);
+        std::process::exit(1);
+    }
 }
