@@ -16,10 +16,10 @@ mod level_10;
 //     println!("Namaste World!");
 // }
 
-fn main() {
-
-    if let Err(e) = level_10::scrapper() {
-        eprintln!("Error occurred: {}",e);
+#[tokio::main]
+async fn main() {
+    if let Err(e) = level_10::web_scraping_test().await {
+        eprintln!("Error during web scarping: {}",e);
         std::process::exit(1);
     }
 }

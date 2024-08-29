@@ -8,6 +8,8 @@ use std::io::{BufRead,BufReader};
 use std::io;
 use std::collections::HashMap;
 use reqwest;
+use scraper::{Html, Selector};
+use tokio::task;
 
 // function to use threads for calculating factorial of a number
 fn factorial(n:u32) -> u32 {
@@ -151,15 +153,58 @@ pub fn task_manager_checker() {
 // 🟩public wrapper function
 // pub fn web_scraper(url:&str) -> 
 
-pub fn scrapper() -> Result<(), reqwest::Error> {
-    let url = "https://wikipedia.org";
-    let client = reqwest::blocking::Client::new();
+// pub fn scrapper() -> Result<(), reqwest::Error> {
+//     let url = "https://wikipedia.org";
+//     let client = reqwest::blocking::Client::new();
 
-    let response = client.get(url).send()?;
-    println!("Status request: {}",response.status());
+//     let response = client.get(url).send()?;
+//     println!("Status request: {}",response.status());
 
-    let body = response.text()?;
-    println!("Response body:\n{}",body);
+//     let body = response.text()?;
+//     println!("Response body:\n{}",body);
+
+//     Ok(())
+// }
+
+async fn fetch_url(url: &str) -> Result<String,reqwest::Error> {
+    let response = reqwest::get(url).await?;
+    let body = response.text().await?;
+    Ok(body)
+}
+fn extract_title(html_content: &str) -> Option<String>  {
+    let document = Html::parse_document(html_content);
+    let selector = Selector::parse("title").ok()?;
+    let title_element = document.select(&selector).next()?;
+    Some(title_element.text().collect::<Vec<_>>().concat())
+}
+pub async fn web_scraping_test() -> Result<(), reqwest::Error> {
+
+    let urls = vec![
+        "https://www.wikipedia.org",
+        "https://www.rust-lang.org",
+        "https://www.github.com",
+    ];
+    let mut tasks = vec![];
+
+    for url in urls   {
+        let url = url.to_string();
+        let task = task::spawn(async move {
+            match fetch_url(&url).await {
+                Ok(content) => {
+                    if let Some(title) = extract_title(&content) {
+                        println!("Title from {}: {}",url, title);
+                    } else {
+                        eprintln!("Failed to extract title from {}",url);
+                    }
+                }
+                Err(e) => eprintln!("Failed to fetch {}: {}",url,e),
+            }
+        });
+        tasks.push(task);
+      };
+    for task in tasks {
+        task.await.expect("Task failed");
+    }
 
     Ok(())
 }
