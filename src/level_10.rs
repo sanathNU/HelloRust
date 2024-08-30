@@ -208,9 +208,38 @@ pub async fn web_scraping_test() -> Result<(), reqwest::Error> {
     Ok(())
 }
 
-// **CRUD operations macro rust**
+// **CRUD operations macro rust**: creating a geolocation mainly for testing?
+
+// #[macro_export]
 macro_rules! GeoObject {
-    () => {
+    ($name:ident,$($field_name:ident : $field_type:ty),*) => {
+        struct $name {
+            $( $field_name: $field_type,)*
+        }
+        impl $name {
+            fn new($($field_name:$field_type),*)->Self {
+                $name {
+                    $( $field_name,)*
+                }
+            }
+            fn read(&self){
+                $(
+                    println!("{}: {:?}",stringify!($field_name), &self.$field_name);
+                )*
+            }
+            fn update(&mut self,$($field_name:$field_type),*){
+                $(
+                    self.$field_name = $field_name ;
+                )*
+            }
+        }
+        // impl Drop for $name {
+        //     fn drop(&self){
+        //         println!("Destroying struct");
+        //     }
+        // }
         
     };
 }
+
+pub(crate) use GeoObject;
