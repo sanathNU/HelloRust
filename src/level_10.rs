@@ -150,7 +150,6 @@ pub fn task_manager_checker() {
 }
 
 //creating a web_scraping bot to capture trending wikipedia pages, and report single line summaries of it.
-// 🟩public wrapper function
 // pub fn web_scraper(url:&str) -> 
 
 // pub fn scrapper() -> Result<(), reqwest::Error> {
@@ -207,4 +206,11 @@ pub async fn web_scraping_test() -> Result<(), reqwest::Error> {
     }
 
     Ok(())
+}
+
+// **CRUD operations macro rust**
+macro_rules! GeoObject {
+    () => {
+        
+    };
 }
