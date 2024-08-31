@@ -243,3 +243,5 @@ macro_rules! GeoObject {
 }
 
 pub(crate) use GeoObject;
+
+// trait library for calculating areas of different objects
