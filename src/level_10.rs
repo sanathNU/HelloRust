@@ -245,3 +245,75 @@ macro_rules! GeoObject {
 pub(crate) use GeoObject;
 
 // trait library for calculating areas of different objects
+macro_rules! create_shapes {
+    ($name:ident,$($field_name:ident : $field_type:ty),*) => {
+        #[derive(Debug)]
+        pub struct $name {
+            $( $field_name:$field_type,)*
+        }
+        impl $name {
+            pub fn new($($field_name:$field_type),*)->Self {
+                $name {
+                    $( $field_name,)*
+                }
+            }
+        }
+    }
+}
+pub trait Describe {
+    fn describe(&self) -> String;
+}
+trait Area {
+    type Numeric: std::fmt::Display;
+
+    fn area(&self)->Self::Numeric;
+}
+impl<T:std::fmt::Debug> Describe for T {
+    fn describe(&self)->String{
+        format!("{:?}",self)
+    }
+}
+
+create_shapes!(Circle,radius:f64);
+impl Area for Circle {
+    type Numeric = f64;
+    fn area(&self)->Self::Numeric{
+        std::f64::consts::PI*self.radius.powi(2)
+    }
+}
+
+create_shapes!(Triangle,a:f64,b:f64,c:f64);
+impl Area for Triangle {
+    type Numeric = f64;
+    fn area(&self)->Self::Numeric{
+        let s = (self.a+self.b+self.c)/2.0;
+        (s*(s-self.a)*(s-self.b)*(s-self.c)).sqrt()
+    }
+}
+create_shapes!(Rectangle,length:f64,breadth:f64);
+impl Area for Rectangle {
+    type Numeric = f64;
+    fn area(&self)->Self::Numeric{
+        self.length*self.breadth
+    }
+}
+
+
+// 🟩public wrapper function
+pub fn macro_test() {
+    // Create instances of the shapes
+    let circ1 = Circle::new(5.0);
+    let tri1 = Triangle::new(3.0, 4.0, 5.0);
+    let rect1 = Rectangle::new(4.0, 5.0);
+
+    // Print descriptions and areas
+    println!("Circle Description: {}", circ1.describe());
+    println!("Circle Area: {}", circ1.area());
+
+    println!("Triangle Description: {}", tri1.describe());
+    println!("Triangle Area: {}", tri1.area());
+
+    println!("Rectangle Description: {}", rect1.describe());
+    println!("Rectangle Area: {}", rect1.area());
+}
+

@@ -26,10 +26,8 @@
 - [ ] **Trait for Complex Geometry Calculations**  
   Problem: Create a trait `Shape` with methods `area` and `perimeter`. Implement this trait for `Triangle` and `Rectangle`. Ensure each implementation correctly calculates the area and perimeter based on the shape's properties.
 - [ ] **Combining Traits and Generics**  
-  Problem: Define two traits: `Printable` and `Area`. Implement a struct `ShapePrinter` that uses a generic type bound by both `Printable` and `Area`. Create a method that prints the shape's area and description.
+  Problem: Define two traits: `Describe` and `Area`. Implement a struct `ShapePrinter` that uses a generic type bound by both `Describe` and `Area`. Create a method that prints the shape's area and description.
 - [ ] **Default Trait Implementation**  
   Problem: Design a trait `DefaultArea` with a default implementation of `area` that returns a constant value. Implement this trait for a struct `Square`, overriding the default `area` method.
-- [ ] **Trait for Calculating Perimeter**  
-  Problem: Create a trait `Perimeter` with a method `perimeter`. Implement this trait for `Circle` and `Rectangle`. Write a generic function that takes any shape implementing `Perimeter` and returns its perimeter.
 - [ ] **Using Trait Objects**  
-  Problem: Define a trait `Shape` with a method `area`. Implement this trait for `Circle` and `Rectangle`. Create a function that accepts a `&dyn Shape` trait object and prints the area of the shape.
+  Problem: Define a trait `Reportable` with methods for generating a textual report. Implement this trait for various data types, including a `User` struct and a `Product` struct. Write a function that accepts a trait object `&dyn Reportable` and generates a comprehensive report based on the data type.

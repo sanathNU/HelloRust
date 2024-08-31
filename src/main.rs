@@ -23,7 +23,8 @@ async fn main() {
     //     eprintln!("Error during web scarping: {}",e);
     //     std::process::exit(1);
     // }
-    level_10::GeoObject!(Location,x:f64,y:f64);
-    let location1 = Location::new(45.6,34.5);
-    location1.read();
+    // level_10::GeoObject!(Location,x:f64,y:f64);
+    // let location1 = Location::new(45.6,34.5);
+    // location1.read();
+    level_10::macro_test();
 }
