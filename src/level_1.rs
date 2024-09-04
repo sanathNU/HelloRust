@@ -68,54 +68,6 @@ pub fn stud_read_write(){
 
 }
 
-// fn stud_read<R: BufRead>(reader: &mut R, studs: i32) -> Vec<Student> {
-//     let mut stud_list = Vec::new();
-//     let mut input = String::new();
-//     for i in 0..studs {
-//         writeln!(std::io::stdout(),"Enter the name of student {}",i).unwrap();
-//         reader.read_line(&mut input).expect("Failed to read input");
-//         let name1 = input.trim().to_string();
-//         input.clear();
-
-//         writeln!(std::io::stdout(), "Enter height of student {} in cm", i).unwrap();
-//         reader.read_line(&mut input).expect("Failed to read input");
-//         let height1: i32 = input.trim().parse().expect("Expected an integer");
-//         input.clear();
-
-//         writeln!(std::io::stdout(), "Enter age of the student {}", i).unwrap();
-//         reader.read_line(&mut input).expect("Failed to read input");
-//         let age1: i32 = input.trim().parse().expect("Expected an integer");
-//         input.clear();
-
-//         writeln!(std::io::stdout()).unwrap();
-//         let s = Student {
-//             name: name1,
-//             height: height1,
-//             age: age1,
-//         };
-
-//         stud_list.push(s);
-
-//     }
-//     stud_list
-// }
-
-// fn stud_print<W: Write>(writer: &mut W, stud_list: Vec<Student>) {
-//     for student in stud_list {
-//         writeln!(writer, "Student Name: {}", student.name).unwrap();
-//         writeln!(writer, "Student Height: {}", student.height).unwrap();
-//         writeln!(writer, "Student age: {}\n", student.age).unwrap();
-//     }
-// }
-// pub fn stud_read_write<R: BufRead, W: Write>(reader: &mut R, writer: &mut W) {
-//     writeln!(writer, "Enter the number of students in the group!").unwrap();
-//     let mut input = String::new();
-//     reader.read_line(&mut input).expect("Failed to read input");
-//     let studs: i32 = input.trim().parse().expect("Expected an integer");
-//     let students = stud_read(reader, studs);
-//     stud_print(writer, students);
-// }
-
 // Function to calculate and print the area of a circle
 pub fn area_of_circle(){
     let mut input = String::new();
