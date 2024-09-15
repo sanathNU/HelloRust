@@ -20,7 +20,7 @@ Welcome to **HelloRust**! This repository contains a collection of small code sn
 
 ## Purpose
 
-This repository is designed to provide a set of simple problems that are intended to be completed within 10-12 hours of learning Rust. While it took me several weeks to work through these problems 😅, I hope this collection will be helpful for other newcomers to Rust.
+This repository is designed to provide a set of simple problems that are intended to be completed within 10-12 hours of learning Rust. While it took me several weeks to work through these problems 😅, I hope this collection will be helpful for other newbies to Rust.
 
 ## Repository Structure
 
@@ -28,7 +28,7 @@ Originally, my code was scattered across various folders, which made it challeng
 
 There's also a seperate set of problems on Macros & Traits, that I asked ChatGPT to provide while solving the problems in the 10th Level. I didn't understand macros and traits until that point. So I had decided to double down and solve more problems regarding that.
 
-There should be a good list of around 20 problems there, which I have solved in macros.rs & traits.rs. Do give the problems a try yourself, before looking at my odd looking solutions.
+There should be a good list of around 20 problems there, which I have solved in macros.rs & traits.rs. Do give the problems a try yourself, before looking at my odd looking solutions 😅.
 
 ![Rust Logo](https://w7.pngwing.com/pngs/114/914/png-transparent-rust-programming-language-logo-machine-learning-haskell-crab-animals-cartoon-crab-thumbnail.png)
 
@@ -36,7 +36,7 @@ There should be a good list of around 20 problems there, which I have solved in 
 
 ### Basic Concepts
 
-The initial set of problems focuses on fundamental Rust concepts and basic programming exercises. These problems will help you practice essential skills such as:
+The initial set of problems focuses on fundamental Rust concepts and basic programming exercises. Topics covered:
 
 - Function definition
 - Control flow
@@ -44,7 +44,7 @@ The initial set of problems focuses on fundamental Rust concepts and basic progr
 
 ### Advanced Topics
 
-From Level 6 onwards, the problems delve into more advanced Rust features. These exercises will challenge you to explore:
+From Level 6 onwards, the problems delve into more advanced Rust features. Topics covered:
 
 - Advanced data structures
 - Error handling

@@ -1,12 +1,11 @@
 use HelloRust::level_1::*;
-use super::*;
+// use super::*;
 use std::io;
 use std::io::{BufRead, Write};
 
 // test module for testing level_1 function
 #[cfg(test)]
 mod tests {
-
         #[test]
         fn test_favapps() {
             level_1::favapps();
