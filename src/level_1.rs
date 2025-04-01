@@ -26,12 +26,12 @@ fn stud_read(studs: i32) -> Vec<Student>{
         let name1 = input.trim().to_string();
         input.clear();
 
-        println!("Enter height of student {} in cm",i);
+        println!("Enter height of student {} in cm",name1);
         io::stdin().read_line(&mut input).expect("failed to read input");
         let height1:i32 = input.trim().parse().expect("Expected an integer");
         input.clear();
 
-        println!("Enter age of the student {}",i);
+        println!("Enter age of the student {}",name1);
         io::stdin().read_line(&mut input).expect("Failed to read input");
         let age1:i32 = input.trim().parse().expect("Expected an integer");
         input.clear();

@@ -91,5 +91,6 @@ fn test_level10(){
 #[tokio::main]
 async fn main() {
 
-    level_10::macro_test();
+    // level_10::macro_test();
+    level_1::stud_read_write();
 }
