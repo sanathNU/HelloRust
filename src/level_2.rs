@@ -27,8 +27,10 @@ pub fn largest2(){
 pub fn min3(){
     println!("This function compares 3 numbers and finds it's minimum");
     let mut input = String::new();
+
     println!("Enter 3 numbers A, B & C in single line seperated by space");
     io::stdin().read_line(&mut input).expect("Failed to read input");
+    
     let mut substr_iter = input.split_whitespace();
     let mut next_sum = || -> usize {
         substr_iter.next().expect("Enough enough input numbers")

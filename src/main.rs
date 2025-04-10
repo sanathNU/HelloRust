@@ -11,10 +11,6 @@ mod level_8;
 mod level_9;
 mod level_10;
 
-//default function to prevent any testing
-// fn main() {
-//     println!("Namaste World!");
-// }
 
 fn test_level1(){
     level_1::favapps();
@@ -92,5 +88,5 @@ fn test_level10(){
 async fn main() {
 
     // level_10::macro_test();
-    level_1::stud_read_write();
+    // level_1::stud_read_write();
 }
